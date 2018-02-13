@@ -1,28 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Input = () => {
+const Input = (props) => {
   return(
     <div>
-      <label htmlFor={this.props.id}>{this.props.name}</label>
-      <input id={this.props.id}
-        name={this.props.id}
+      <label htmlFor={props.name}>{props.label}</label>
+      <input id={props.name}
+        name={props.name}
         autoComplete="false"
-        required={this.props.required}
-        value={this.props.value}
-        type={this.props.type}
-        placeholder={this.props.placeholder}></input>
+        required={props.required}
+        value={props.value}
+        type={props.type}
+        placeholder={props.placeholder}
+        onChange={props.handleChange}></input>
     </div>
   );
 }
 
 Input.propTypes = {
-  id: PropTypes.string.required,
-  name: PropTypes.string.required,
-  required: PropTypes.bool.required,
-  value: PropTypes.string.required,
-  type: PropTypes.string.required,
-  placeholder: PropTypes.string.required
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  required: PropTypes.bool.isRequired,
+  value: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired
 }
 
 export default Input;

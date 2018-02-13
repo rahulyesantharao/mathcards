@@ -1,5 +1,9 @@
 .card {
   padding: 20px;
+  // border-radius: 0.5rem;
+	// box-shadow: 0 0 1em 0 rgba(51,51,51,0.25);
   box-shadow: $card-box-shadow;
   border-radius: $card-border-radius;
+  background: rgba(255,255,255,0.6);
+  // width: 100%;
 }

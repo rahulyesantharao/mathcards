@@ -1,6 +1,9 @@
 // @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 // @import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Zilla+Slab');
+// @import url('https://fonts.googleapis.com/css?family=Zilla+Slab');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Cookie');
+// @import url(https://fonts.googleapis.com/css?family=Cookie|Raleway:300,700,400);
 // @import url('https://fonts.googleapis.com/css?family=Montserrat');
 // Site Colors
 $color-primary: blue;
@@ -20,9 +23,9 @@ $color-nav-link: white; //black;
 // $color-nav-link-pressed: $color-nav-link;
 
 // Fonts
-$font-family-primary: 'Zilla Slab', sans-serif; //Lato, sans-serif;
-$font-family-secondary: 'Zilla Slab', sans-serif;
-$font-family-headings: 'Zilla Slab', monospace;
+$font-family-primary: 'Raleway', sans-serif; //Lato, sans-serif;
+$font-family-secondary: 'Raleway', sans-serif;
+$font-family-headings: 'Cookie', serif;
 
 $font-weight-light: 300;
 $font-weight-medium: 500;
@@ -35,7 +38,10 @@ $font-size-h: 3rem, 2rem, 1.2rem;
 
 // Cards
 $card-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-$card-border-radius: 3px;
+$card-border-radius: 0.5rem;
+
+// Forms
+$button-border-radius: 0.25rem;
 
 // Transitions
 $transition-time: 0.25s;
