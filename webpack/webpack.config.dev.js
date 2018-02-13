@@ -2,8 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const CONFIG = {
-  SRC: path.join(__dirname, '..', 'src'),
-  DIST: path.join(__dirname, '..', 'dist')
+  SRC: path.join(__dirname, '..', 'client', 'src'),
+  DIST: path.join(__dirname, '..', 'client', 'dist')
 };
 
 module.exports = {

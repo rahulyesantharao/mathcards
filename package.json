@@ -4,13 +4,22 @@
   "description": "A web app to allow teachers to create custom problems for students",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "esw webpack client tools",
+    "lint:watch": "npm run lint -- --watch",
+    "dev:watch": "node ./tools/devServer.js",
+    "start": "npm-run-all --parallel lint:watch dev:watch",
+    "clean:dist": "rm -r ./client/dist && mkdir ./client/dist",
+    "copy-favicons": "",
+    "prebuild": "",
+    "build": "",
+    "postbuild": ""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rahulyesantharao/mathcards.git"
   },
-  "author": "Rahul Yesantharao",
+  "author": "Rahul Yesantharao <rahul.yesantharao@gmail.com> (http://www.rahulyesantharao.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rahulyesantharao/mathcards/issues"
