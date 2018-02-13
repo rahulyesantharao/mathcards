@@ -6,7 +6,7 @@ import LoginBox from './LoginBox';
 const HomePage = () => {
   return (
     <div className="homePage">
-      <LoginBox></LoginBox>
+      <LoginBox/>
     </div>
   );
 }

@@ -1,12 +1,11 @@
 import React from 'react';
+import LoginForm from './LoginForm';
 
 const LoginBox = () => {
   return(
     <div className="loginBox">
       <div className="card">
-        <div>
-          <p>Login</p>
-        </div>
+        <LoginForm/>
       </div>
     </div>
   );
