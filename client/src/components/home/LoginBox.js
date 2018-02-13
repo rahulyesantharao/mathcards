@@ -5,7 +5,7 @@ const LoginBox = () => {
     <div className="loginBox">
       <div className="card">
         <div>
-          <p>Test</p>
+          <p>Login</p>
         </div>
       </div>
     </div>
