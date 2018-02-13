@@ -1,9 +1,10 @@
 import React from 'react';
+import LoginBox from './LoginBox';
 
 const HomePage = () => {
   return (
     <div className="homePage">
-      <p>test</p>
+      <LoginBox></LoginBox>
     </div>
   );
 }
