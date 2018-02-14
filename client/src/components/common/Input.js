@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Input = (props) => {
   return(
-    <div>
+    <div className = {props.className}>
       <label htmlFor={props.name}>{props.label}</label>
       <input id={props.name}
         name={props.name}
@@ -24,7 +24,8 @@ Input.propTypes = {
   value: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
-  handleChange: PropTypes.func.isRequired
+  handleChange: PropTypes.func.isRequired,
+  className: PropTypes.string
 }
 
 export default Input;

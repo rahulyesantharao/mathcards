@@ -28,8 +28,10 @@ class RegisterForm extends React.Component {
   render() {
     return (
     <form onSubmit={this.handleSubmit}>
-      <Input name="first" label="First Name" required={true} value={this.state.first} type="text" placeholder="" handleChange={this.handleChange.bind(this)}/>
-      <Input name="last" label="Last Name" required={true} value={this.state.last} type="text" placeholder="" handleChange={this.handleChange.bind(this)}/>
+      <div className="columns">
+        <Input className="column is-12-mobile is-12-tablet is-6-desktop" name="first" label="First Name" required={true} value={this.state.first} type="text" placeholder="" handleChange={this.handleChange.bind(this)}/>
+        <Input className="column is-12-mobile is-12-tablet is-6-desktop" name="last" label="Last Name" required={true} value={this.state.last} type="text" placeholder="" handleChange={this.handleChange.bind(this)}/>
+      </div>
       <Input name="username" label="Username" required={true} value={this.state.username} type="text" placeholder="" handleChange={this.handleChange.bind(this)}/>
       <Input name="email" label="Email" required={true} value={this.state.email} type="email" placeholder="" handleChange={this.handleChange.bind(this)}/>
       <Input name="password" label="Password" required={true} value={this.state.password} type="password" placeholder="" handleChange={this.handleChange.bind(this)}/>
