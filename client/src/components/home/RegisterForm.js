@@ -6,8 +6,11 @@ class RegisterForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      first: "",
+      last: "",
       username: "",
-      password: ""
+      email: "",
+      password: "",
     };
   }
 
@@ -25,7 +28,10 @@ class RegisterForm extends React.Component {
   render() {
     return (
     <form onSubmit={this.handleSubmit}>
-      <Input name="username" label="REGISTER" required={true} value={this.state.username} type="text" placeholder="" handleChange={this.handleChange.bind(this)}/>
+      <Input name="first" label="First Name" required={true} value={this.state.first} type="text" placeholder="" handleChange={this.handleChange.bind(this)}/>
+      <Input name="last" label="Last Name" required={true} value={this.state.last} type="text" placeholder="" handleChange={this.handleChange.bind(this)}/>
+      <Input name="username" label="Username" required={true} value={this.state.username} type="text" placeholder="" handleChange={this.handleChange.bind(this)}/>
+      <Input name="email" label="Email" required={true} value={this.state.email} type="email" placeholder="" handleChange={this.handleChange.bind(this)}/>
       <Input name="password" label="Password" required={true} value={this.state.password} type="password" placeholder="" handleChange={this.handleChange.bind(this)}/>
       <InputButton name="submit" label="Submit" type="submit"/>
     </form>

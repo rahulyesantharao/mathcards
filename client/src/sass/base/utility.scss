@@ -7,7 +7,9 @@
 .top-pad {
   padding-top: 1.5rem;
 }
-
+.clickable {
+  cursor: pointer;
+}
 // Responsive classes
 @include desktop {
   .is-hidden-desktop {

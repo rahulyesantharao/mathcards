@@ -34,7 +34,7 @@ class UserPortal extends React.Component {
       <div className="card">
         <h1 className="is-centered">MATHCARDS</h1>
         <h2 className="is-centered">
-          <span onClick={this.showLogin.bind(this)} style={this.state.login?activeStyle:{}}>Login</span> | <span onClick={this.showRegister.bind(this)} style={this.state.login?{}:activeStyle}>Sign Up</span>
+          <span className="clickable" onClick={this.showLogin.bind(this)} style={this.state.login?activeStyle:{}}>Login</span> | <span className="clickable" onClick={this.showRegister.bind(this)} style={this.state.login?{}:activeStyle}>Sign Up</span>
         </h2>
         {this.state.login?(<LoginForm/>):(<RegisterForm/>)}
       </div>
