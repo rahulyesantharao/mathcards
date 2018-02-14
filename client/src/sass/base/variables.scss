@@ -20,8 +20,14 @@ $font-weight-bold: 700;
 // Font Sizes
 $font-size-logo: 1.4rem;
 $font-size-body-base: 1rem;
-$font-size-body-tablet: 1.15rem;
-$font-size-h: 3rem, 2rem, 1.2rem;
+$font-size-body-tablet: 1.20rem;
+$font-size-body-desktop: 1.35rem;
+$font-size-h-base: 3rem, 2rem, 1.2rem;
+$font-size-h-tablet: 3.5rem, 2.5rem, 1.5rem;
+$font-size-h-desktop: 4rem, 3rem, 2rem;
+$font-size-label-base: 0.8rem;
+$font-size-label-tablet: 0.9rem;
+$font-size-label-desktop: 1rem;
 
 // Line Heights
 $line-height-primary: 1.5;
@@ -34,7 +40,7 @@ $color-bg: white; //white;
 $color-selection: lighten(#2b669b, 50%);
 
 // Font Colors
-$color-font: #797979; //black;
+$color-font: black;
 
 // Link Colors
 $color-link: lighten(#2b669b, 30%);

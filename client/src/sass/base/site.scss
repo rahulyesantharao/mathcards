@@ -16,6 +16,9 @@ body {
   @include tablet {
     font-size: $font-size-body-tablet;
   }
+  @include desktop {
+    font-size: $font-size-body-desktop;
+  }
   height: 100%;
 }
 
@@ -70,28 +73,34 @@ ul {
 // BASE HEADING STYLES
 @for $index from 1 through 3 {
   h#{$index}{
-    font-size: nth($font-size-h, $index);
+    font-size: nth($font-size-h-base, $index);
+    @include tablet {
+      font-size: nth($font-size-h-tablet, $index);
+    }
+    @include desktop {
+      font-size: nth($font-size-h-desktop, $index);
+    }
     font-family: $font-family-headings;
   }
 }
 
 // TODO: BASE INPUT STYLING
 input {
-  margin-bottom: 15px;
   display: block;
+  margin-bottom: 15px;
   padding: 5px 10px;
   width: 100%;
-  // border: none;
+  color: $color-font;
   border-bottom: 1px solid black;
   background: none;
-  color: black;
   outline: none;
   &[type=submit], [type=button] {
+    margin: 0 auto;
     border-radius: $button-border-radius;
     width: fit-content;
     border: 1px solid black;
-    background: rgba(255,255,255,0.25);
-    margin: 0 auto;
+    // background: rgba(255,255,255,0.25);
+
     cursor: pointer;
     &:disabled, [disabled] {
       cursor:not-allowed;
@@ -101,11 +110,16 @@ input {
 }
 
 label {
+  padding-left: 10px;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 13px;
-  padding-left: 10px;
-  // padding-bottom: 10px;
-  color: black;
+  font-size: $font-size-label-base;
+  @include tablet {
+    font-size: $font-size-label-tablet;
+  }
+  @include desktop {
+    font-size: $font-size-label-desktop;
+  }
+  // color: $color-font;
   display: block;
 }
