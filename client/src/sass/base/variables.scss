@@ -1,10 +1,32 @@
-// @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
-// @import url('https://fonts.googleapis.com/css?family=Roboto');
-// @import url('https://fonts.googleapis.com/css?family=Zilla+Slab');
+// ==================================
+//           SITE VARIABLES
+// ==================================
+
+// ------------ FONTS ------------
+// Imports
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Cookie');
-// @import url(https://fonts.googleapis.com/css?family=Cookie|Raleway:300,700,400);
-// @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+// Fonts Families
+$font-family-primary: 'Raleway', sans-serif; //Lato, sans-serif;
+$font-family-secondary: 'Raleway', sans-serif;
+$font-family-headings: 'Cookie', serif;
+
+// Font Weights
+$font-weight-light: 300;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Font Sizes
+$font-size-logo: 1.4rem;
+$font-size-body-base: 1rem;
+$font-size-body-tablet: 1.15rem;
+$font-size-h: 3rem, 2rem, 1.2rem;
+
+// Line Heights
+$line-height-primary: 1.5;
+
+// ------------ COLORS ------------
 // Site Colors
 $color-primary: blue;
 $color-accent: #2b669b;
@@ -14,28 +36,15 @@ $color-selection: lighten(#2b669b, 50%);
 // Font Colors
 $color-font: #797979; //black;
 
+// Link Colors
 $color-link: lighten(#2b669b, 30%);
 $color-link-hover: darken($color-link, 30%);
 $color-link-pressed: darken($color-link, 60%);
-
-$color-nav-link: white; //black;
+$color-nav-link: white;
 // $color-nav-link-hover: $color-nav-link;
 // $color-nav-link-pressed: $color-nav-link;
 
-// Fonts
-$font-family-primary: 'Raleway', sans-serif; //Lato, sans-serif;
-$font-family-secondary: 'Raleway', sans-serif;
-$font-family-headings: 'Cookie', serif;
-
-$font-weight-light: 300;
-$font-weight-medium: 500;
-$font-weight-bold: 700;
-
-$line-height-primary: 1.5;
-
-$font-size-logo: 1.4rem;
-$font-size-h: 3rem, 2rem, 1.2rem;
-
+// ------------ COMPONENTS ------------
 // Cards
 $card-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 $card-border-radius: 0.5rem;
@@ -43,11 +52,13 @@ $card-border-radius: 0.5rem;
 // Forms
 $button-border-radius: 0.25rem;
 
+// ------------ ANIMATION ------------
 // Transitions
 $transition-time: 0.25s;
 $page-transition-time: 0.25s;
 $navlink-transition-time: 0.25s;
 
+// ------------ RESPONSIVE ------------
 // Responsive Breakpoints
 $screen-gap: 24px;
 $screen-tablet: 769px;
@@ -55,6 +66,7 @@ $screen-desktop: 960px + (2*$screen-gap);
 $screen-widescreen: 1152px + (2*$screen-gap);
 $screen-fullhd: 1344px +  (2*$screen-gap);
 
+// Breakpoint Mixins
 @mixin mobile { // mobile screens
   @media screen and (max-width: $screen-tablet - 1px) {
     @content;

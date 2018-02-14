@@ -1,0 +1,41 @@
+// PARAGRAPH STYLING
+.text {
+  p {
+    padding: 0.5rem 0;
+  }
+}
+.top-pad {
+  padding-top: 1.5rem;
+}
+
+// Responsive classes
+@include desktop {
+  .is-hidden-desktop {
+    display: none !important;
+  }
+}
+
+@include touch {
+  .is-hidden-touch {
+    display: none !important;
+  }
+}
+
+.top-pad-mobile {
+  @include mobile {
+    padding-top: 1.5rem !important;
+  }
+}
+.is-right {
+  @include tablet {
+    margin-left: auto;
+  }
+}
+
+.is-justified {
+  text-align: justify;
+}
+
+.is-centered {
+  text-align: center;
+}

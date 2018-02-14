@@ -1,4 +1,8 @@
-// basic site styling
+// ==================================
+//        BASIC SITE STYLING
+// ==================================
+
+// BASE SITE STYLES
 html {
   background-color: $color-bg;
   color: $color-font;
@@ -8,9 +12,9 @@ html {
 }
 
 body {
-  font-size: 1rem;
+  font-size: $font-size-body-base;
   @include tablet {
-    font-size: 1.15rem;
+    font-size: $font-size-body-tablet;
   }
   height: 100%;
 }
@@ -25,13 +29,13 @@ body {
   }
 }
 
-// Basic selection styles
+// BASE SELECTION STYLES
 ::selection {
   background: $color-selection;
   text-shadow: none;
 }
 
-// Basic link styles
+// BASE LINK STYLES
 a {
   // will-change: color;
   transition: color $transition-time ease;
@@ -49,7 +53,7 @@ a {
   font-weight: $font-weight-bold;
 }
 
-// List styles
+// BASE LIST STYLES
 ul {
   li {
     display: flex;
@@ -63,19 +67,15 @@ ul {
   }
 }
 
-// Basic heading styles
+// BASE HEADING STYLES
 @for $index from 1 through 3 {
   h#{$index}{
     font-size: nth($font-size-h, $index);
     font-family: $font-family-headings;
-    span {
-      background-color: black;
-      color: white;
-    }
   }
 }
 
-// Input styling
+// TODO: BASE INPUT STYLING
 input {
   margin-bottom: 15px;
   display: block;
@@ -99,6 +99,7 @@ input {
     }
   }
 }
+
 label {
   font-weight: bold;
   text-transform: uppercase;
@@ -107,73 +108,4 @@ label {
   // padding-bottom: 10px;
   color: black;
   display: block;
-}
-
-
-h3 {
-  font-weight: $font-weight-bold;
-  // padding: 0.3rem 0;
-}
-
-// Basic paragraph styles
-.text {
-  p {
-    padding: 0.5rem 0;
-    // &:first-child {
-    //   padding-top: 0;
-    // }
-  }
-}
-.top-pad {
-  padding-top: 1.5rem;
-}
-// Responsive classes
-@include desktop {
-  .is-hidden-desktop {
-    display: none !important;
-  }
-}
-
-@include touch {
-  .is-hidden-touch {
-    display: none !important;
-  }
-}
-
-#aboutHeader {
-  // background-image: url('../images/about-lake1.min.jpg');
-  background-size: cover;
-  background-position: 50% 100%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  padding: 90px 0;
-}
-
-.is-flex {
-  display: flex !important;
-  flex-wrap: wrap;
-  @include mobile {
-    display: block !important;
-    p {
-      text-align: center;
-    }
-  }
-}
-.top-pad-mobile {
-  @include mobile {
-    padding-top: 1.5rem !important;
-  }
-}
-.is-right {
-  @include tablet {
-    margin-left: auto;
-  }
-}
-
-.is-justified {
-  text-align: justify;
-}
-
-.is-centered {
-  text-align: center;
 }
