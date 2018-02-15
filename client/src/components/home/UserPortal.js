@@ -40,12 +40,6 @@ class UserPortal extends React.Component {
         </h2>
         <Animation mounted={this.state.login?true:false}><LoginForm/></Animation>
         <Animation mounted={this.state.login?false:true}><RegisterForm/></Animation>
-        {/* <TransitionGroup> */}
-        {/* <div className="is-flex"> */}
-          {/* {this.state.login?(<SlideLeft key={1}><LoginForm/></SlideLeft>): */}
-          {/* (<SlideRight key={2}><RegisterForm/></SlideRight>)} */}
-        {/* </div> */}
-        {/* </TransitionGroup> */}
       </div>
     </div>
     );

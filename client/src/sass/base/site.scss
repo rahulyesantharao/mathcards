@@ -91,22 +91,32 @@ input {
   padding: 5px 10px;
   width: 100%;
   color: $color-font;
-  border-bottom: 2px solid lighten(black, 70%);
+  border-bottom: 2px solid lighten(black, 80%);
   background: none;
   outline: none;
-  transition: border $transition-time ease;
+  transition: all $transition-time ease;
   &:focus {
     border-bottom: 2px solid black;
   }
   &[type=submit], [type=button] {
     margin: 0 auto;
-    border-radius: $button-border-radius;
+    // border-radius: $button-border-radius;
     width: fit-content;
     border: 1px solid black;
     cursor: pointer;
+    position: relative;
+    transition: all 0.1s ease;
     &:disabled, [disabled] {
       cursor:not-allowed;
       opacity: 0.6;
+    }
+    &:hover, :focus {
+      background: black;
+      color: white;
+    }
+    &:active {
+      // top: 2px;
+      transform: scale(0.95);
     }
   }
 }
