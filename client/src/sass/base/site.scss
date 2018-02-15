@@ -87,7 +87,7 @@ ul {
 // TODO: BASE INPUT STYLING
 input {
   display: block;
-  margin-bottom: 15px;
+  // margin-bottom: 15px;
   padding: 5px 10px;
   width: 100%;
   color: $color-font;
@@ -99,8 +99,6 @@ input {
     border-radius: $button-border-radius;
     width: fit-content;
     border: 1px solid black;
-    // background: rgba(255,255,255,0.25);
-
     cursor: pointer;
     &:disabled, [disabled] {
       cursor:not-allowed;

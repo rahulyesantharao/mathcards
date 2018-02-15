@@ -19,15 +19,20 @@ class LoginForm extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    alert("Submitted!");
+    alert(JSON.stringify(this.state, null, 4));
   }
 
   render() {
     return (
-    <form onSubmit={this.handleSubmit}>
-      <Input name="username" label="Username" required={true} value={this.state.username} type="text" placeholder="" handleChange={this.handleChange.bind(this)}/>
-      <Input name="password" label="Password" required={true} value={this.state.password} type="password" placeholder="" handleChange={this.handleChange.bind(this)}/>
-      <InputButton name="submit" label="Submit" type="submit"/>
+    <form onSubmit={this.handleSubmit.bind(this)}>
+      <div className="columns">
+        <Input className="column is-12-mobile is-12-tablet is-12-desktop" name="username" label="Username" required={true} value={this.state.username} type="text" placeholder="" handleChange={this.handleChange.bind(this)}/>
+        <Input className="column is-12-mobile is-12-tablet is-12-desktop" name="password" label="Password" required={true} value={this.state.password} type="password" placeholder="" handleChange={this.handleChange.bind(this)}/>
+        <div className="column is-12-mobile is-12-tablet is-12-desktop">
+          <InputButton name="submit" label="Submit" type="submit"/>
+        </div>
+      </div>
+
     </form>
     );
   }
