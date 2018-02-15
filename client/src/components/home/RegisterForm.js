@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Input from "../common/Input";
 import InputButton from "../common/InputButton";
 
@@ -27,7 +28,7 @@ class RegisterForm extends React.Component {
 
   render() {
     return (
-    <form onSubmit={this.handleSubmit.bind(this)}>
+    <form className={this.props.className} onSubmit={this.handleSubmit.bind(this)}>
       <div className="columns">
         <Input className="column is-12-mobile is-12-tablet is-6-desktop" name="first" label="First Name" required={true} value={this.state.first} type="text" placeholder="" handleChange={this.handleChange.bind(this)}/>
         <Input className="column is-12-mobile is-12-tablet is-6-desktop" name="last" label="Last Name" required={true} value={this.state.last} type="text" placeholder="" handleChange={this.handleChange.bind(this)}/>
@@ -42,5 +43,7 @@ class RegisterForm extends React.Component {
     );
   }
 }
-
+RegisterForm.propTypes = {
+  className: PropTypes.string
+}
 export default RegisterForm;

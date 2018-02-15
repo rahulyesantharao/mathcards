@@ -1,7 +1,9 @@
 import React from 'react';
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm';
-
+import Animation from '../common/Animations';
+// import {TransitionGroup} from 'react-transition-group';
+// import {SlideLeft, SlideRight} from '../common/Animations';
 class UserPortal extends React.Component {
   constructor(props) {
     super(props);
@@ -36,7 +38,14 @@ class UserPortal extends React.Component {
         <h2 className="is-centered">
           <span className="clickable" onClick={this.showLogin.bind(this)} style={this.state.login?activeStyle:{}}>Login</span> | <span className="clickable" onClick={this.showRegister.bind(this)} style={this.state.login?{}:activeStyle}>Sign Up</span>
         </h2>
-        {this.state.login?(<LoginForm/>):(<RegisterForm/>)}
+        <Animation mounted={this.state.login?true:false}><LoginForm/></Animation>
+        <Animation mounted={this.state.login?false:true}><RegisterForm/></Animation>
+        {/* <TransitionGroup> */}
+        {/* <div className="is-flex"> */}
+          {/* {this.state.login?(<SlideLeft key={1}><LoginForm/></SlideLeft>): */}
+          {/* (<SlideRight key={2}><RegisterForm/></SlideRight>)} */}
+        {/* </div> */}
+        {/* </TransitionGroup> */}
       </div>
     </div>
     );

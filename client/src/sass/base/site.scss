@@ -91,9 +91,13 @@ input {
   padding: 5px 10px;
   width: 100%;
   color: $color-font;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid lighten(black, 70%);
   background: none;
   outline: none;
+  transition: border $transition-time ease;
+  &:focus {
+    border-bottom: 2px solid black;
+  }
   &[type=submit], [type=button] {
     margin: 0 auto;
     border-radius: $button-border-radius;
