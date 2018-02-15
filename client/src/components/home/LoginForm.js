@@ -30,7 +30,7 @@ class LoginForm extends React.Component {
         <Input className="column is-12-mobile is-12-tablet is-12-desktop" name="username" label="Username" required={true} value={this.state.username} type="text" placeholder="" handleChange={this.handleChange.bind(this)}/>
         <Input className="column is-12-mobile is-12-tablet is-12-desktop" name="password" label="Password" required={true} value={this.state.password} type="password" placeholder="" handleChange={this.handleChange.bind(this)}/>
         <div className="column is-12-mobile is-12-tablet is-12-desktop">
-          <InputButton name="submit" label="Submit" type="submit"/>
+          <InputButton name="submit" label="SUBMIT" type="submit"/>
         </div>
       </div>
 
