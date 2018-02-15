@@ -105,7 +105,7 @@ input {
     border: 1px solid black;
     cursor: pointer;
     position: relative;
-    transition: all 0.1s ease;
+    transition: background-color color $transition-time ease, transform 0.1s ease;
     // text-transform: uppercase;
     &:disabled, [disabled] {
       cursor:not-allowed;
