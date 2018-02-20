@@ -1,5 +1,5 @@
 import React from 'react';
-import UserPortal from './UserPortal';
+// import UserPortal from './UserPortal';
 import MainNav from '../common/MainNav';
 
 // https://unsplash.com/photos/N3o-leQyFsI - home
@@ -8,7 +8,7 @@ import MainNav from '../common/MainNav';
 const HomePage = () => {
   return (
     // <div className="homePage">
-    //   <UserPortal/>
+      //  <UserPortal/>
     // </div>
     <MainNav/>
   );

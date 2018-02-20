@@ -1,6 +1,18 @@
+@mixin link-color-nav {
+  background-color: $color-nav-link;
+  &:hover, &:focus {
+    background-color: $color-nav-link-hover;
+  }
+  &:active, &.active {
+    background-color: $color-nav-link-pressed;
+  }
+}
+
 nav {
   z-index: 1;
+  font-weight: $font-weight-bold !important;
   .navbar-drawer {
+    background-color: $color-primary;
     position: fixed;
     top: 0;
     left: 0;
@@ -8,13 +20,82 @@ nav {
     height: 100%;
     overflow: auto;
     transition: transform $transition-time ease;
+    transform: translate(-100%);
     &.is-active {
       transform: translate(0%);
     }
-  }
-  transform: translate(-100%);
 
-  .navbar-item a {
+    @include tablet {
+      transform: translate(0%);
+    }
+
+    .navbar-item {
+      @include link-color-nav;
+      transition: background-color $transition-time ease;
+    }
+  }
+
+  // navbar burger variables
+  $line-height: 2px;
+  $line-between: 2;
+  $line-length: 20px;
+
+  .navbar-burger {
+    z-index: 1000;
+    flex-shrink: 0; // make sure it isn't lost on ultra small screens
+    cursor: pointer;
+    display: block;
     position: relative;
+    height: (3+2*$line-between)*$line-height;
+    width: $line-length;
+    span {
+      background-color: $color-font;
+      display: block;
+      height: $line-height;
+      position: absolute;
+      left: 0;
+      border-radius: $line-height;
+      opacity: 1;
+      width: 100%;
+      transform: rotate(0deg);
+      &:nth-child(1) {
+        // will-change: background-color, top, transform;
+        transition: background-color $page-transition-time ease-in-out, top $transition-time ease-in-out, transform $transition-time ease-in-out;
+        top: 0px;
+      }
+      &:nth-child(2) {
+        // will-change: background-color, opacity, left;
+        transition: background-color $page-transition-time ease-in-out, opacity $transition-time ease-in-out, left $transition-time ease-in-out;
+        top: (1+$line-between)*$line-height;
+      }
+      &:nth-child(3) {
+        // will-change: background-color, top, transform;
+        transition: background-color $page-transition-time ease-in-out, top $transition-time ease-in-out, transform $transition-time ease-in-out;
+        top: (2+2*$line-between)*$line-height;
+      }
+    }
+    &:hover, &:focus {
+      span {
+        background-color: $color-font;
+      }
+    }
+    // When clicked
+    &.is-active {
+      span {
+        background-color: $color-nav-link;
+        &:nth-child(1) {
+          top: 2*$line-height;
+          transform: rotate(135deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+          left: -1*$line-length;
+        }
+        &:nth-child(3) {
+          top: 2*$line-height;
+          transform: rotate(-135deg);
+        }
+      }
+    }
   }
 }

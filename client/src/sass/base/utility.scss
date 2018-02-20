@@ -10,9 +10,16 @@
 .clickable {
   cursor: pointer;
 }
+
 // Responsive classes
 @include desktop {
   .is-hidden-desktop {
+    display: none !important;
+  }
+}
+
+@include tablet {
+  .is-hidden-tablet {
     display: none !important;
   }
 }

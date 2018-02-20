@@ -25,6 +25,9 @@
 .column {
   display: block;
   padding: 0.75rem;
+  &.no-padding {
+    padding: 0;
+  }
   @include mobile {
     @for $i from 1 through 12 {
       &.is-#{$i}-mobile {
