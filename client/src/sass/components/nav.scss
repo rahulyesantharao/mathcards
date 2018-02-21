@@ -32,6 +32,9 @@ nav {
     .navbar-item {
       @include link-color-nav;
       transition: background-color $transition-time ease;
+      a {
+        display: block;
+      }
     }
   }
 

@@ -34,7 +34,7 @@ $line-height-primary: 1.5;
 
 // ------------ COLORS ------------
 // Site Colors
-$color-primary: blue;
+$color-primary: #ffb347;
 $color-accent: #2b669b;
 $color-bg: white; //white;
 $color-selection: lighten(#2b669b, 50%);
@@ -46,7 +46,7 @@ $color-font: black;
 $color-link: lighten(#2b669b, 30%);
 $color-link-hover: darken($color-link, 30%);
 $color-link-pressed: darken($color-link, 60%);
-$color-nav-link: orange;
+$color-nav-link: #ffb347;
 $color-nav-link-hover: darken($color-nav-link, 10%);
 $color-nav-link-pressed: darken($color-nav-link, 20%);
 
