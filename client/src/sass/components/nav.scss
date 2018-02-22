@@ -1,10 +1,25 @@
-@mixin link-color-nav {
+@mixin navitem-color {
   background-color: $color-nav-link;
   &:hover, &:focus {
     background-color: $color-nav-link-hover;
+    color: $color-font;
   }
   &:active, &.active {
     background-color: $color-nav-link-pressed;
+    color: $color-font;
+  }
+}
+
+@mixin navlink-color {
+  color: $color-font;
+  &:link, &:visited {
+    color: $color-font;
+  }
+  &:hover, &:focus {
+    color: $color-font;
+  }
+  &:active, &.active {
+    color: $color-font;
   }
 }
 
@@ -30,10 +45,12 @@ nav {
     }
 
     .navbar-item {
-      @include link-color-nav;
+      @include navitem-color;
       transition: background-color $transition-time ease;
       a {
+        @include navlink-color;
         display: block;
+        padding: 1rem;
       }
     }
   }

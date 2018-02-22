@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
     // <div className="homePage">
       //  <UserPortal/>
-    //  </div>
+    // </div>
     <MainNav/>
   );
 }
