@@ -11,6 +11,7 @@
 }
 
 @mixin navlink-color {
+  $color-font: white;
   color: $color-font;
   &:link, &:visited {
     color: $color-font;
